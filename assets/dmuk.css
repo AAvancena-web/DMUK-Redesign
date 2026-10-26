@@ -1274,3 +1274,13 @@ header.site.stuck{background:rgba(5,11,21,.86)}
 .rm-btn:hover{background:var(--grad);color:#fff;border-color:transparent}
 .rm-btn svg{width:16px;height:16px;transition:transform .3s}
 .rm-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.rmore--dark{background:radial-gradient(70% 80% at 100% 0%,rgba(230,53,155,.12),rgba(230,53,155,0) 60%),#050B15 !important;border-top:1px solid rgba(255,255,255,.07) !important;color:#C5CFDC}
+.rmore--dark .sec-head :is(h1,h2){color:#fff;--fill-dim:40,52,72;--fill-lit:255,255,255}
+.rmore--dark .sec-head :is(h1,h2) .outline .c,.rmore--dark .sec-head :is(h1,h2) .outline .w{color:#F45BA8 !important}
+.rmore--dark .sec-eyebrow{color:#A3AFBF}
+.rmore--dark .rm-body p,.rmore--dark .rm-more ul{color:#C5CFDC}
+.rmore--dark .rm-lead,.rmore--dark .rm-more h3{color:#fff !important}
+.rmore--dark .rm-btn{background:transparent;color:#F45BA8;border-color:rgba(244,91,168,.45)}
+.rmore--dark .rm-btn:hover{color:#fff}
+#reviews .grv-head{box-shadow:0 14px 34px -22px rgba(11,31,58,.25)}
+.grv-head{max-width:780px;margin-left:auto;margin-right:auto}
