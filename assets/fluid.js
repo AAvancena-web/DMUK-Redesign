@@ -18,8 +18,8 @@
     PRESSURE: 0.8, PRESSURE_ITER: 18, CURL: 28,
     RADIUS: 0.32, FORCE: 5200
   };
-  // warm palette only: orange, amber, ember, warm white
-  var PALETTE = [[1.0, 0.42, 0.10], [1.0, 0.62, 0.18], [0.92, 0.24, 0.07], [1.0, 0.78, 0.50], [0.85, 0.32, 0.05]];
+  // Digital Movement AU palette: rose, pink, magenta, soft pink, plum
+  var PALETTE = [[0.95, 0.24, 0.39], [0.90, 0.21, 0.61], [0.86, 0.18, 0.79], [1.0, 0.55, 0.78], [0.70, 0.14, 0.50]];
   function pickColor(k) {
     var c = PALETTE[(Math.random() * PALETTE.length) | 0];
     k = k || 0.34;
