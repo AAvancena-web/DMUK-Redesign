@@ -1252,3 +1252,25 @@ header.site.stuck{background:rgba(5,11,21,.86)}
 .grv .grv-av{color:#fff !important}
 .light .faq-q{color:#0B1F3A}
 .light .faq-item summary:hover .faq-q{color:#D42A86}
+
+/* read-more content block (placeholder) */
+.rmore{background:#fff !important;border-top:1px solid rgba(11,31,58,.06) !important;color:#4B5B70}
+.rmore .sec-head :is(h1,h2){color:#0B1F3A;--fill-dim:214,205,196;--fill-lit:11,31,58}
+.rmore .sec-head :is(h1,h2) .outline .c,.rmore .sec-head :is(h1,h2) .outline .w{color:#D42A86 !important}
+.rmore .sec-eyebrow{color:#6F7D91}
+.rm-grid{display:grid;grid-template-columns:1fr;gap:clamp(20px,4vw,60px);align-items:start}
+@media (min-width:980px){.rm-grid{grid-template-columns:.9fr 1.1fr}}
+.rm-head{align-items:flex-start !important;text-align:left !important;margin:0 !important}
+.rm-head .sec-eyebrow{text-align:left}
+@media (min-width:980px){.rm-head{position:sticky;top:calc(var(--nav-h) + 30px)}}
+.rm-body p{margin:0 0 16px;line-height:1.75;color:#4B5B70}
+.rm-lead{font-family:'Geist',sans-serif;font-weight:700;font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.5 !important;color:#0B1F3A !important}
+.rm-more{padding-top:6px;animation:rmIn .45s ease}
+.rm-more h3{margin:18px 0 8px;font-family:'Geist',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:-.02em;color:#0B1F3A}
+.rm-more ul{margin:0 0 16px;padding-left:20px;color:#4B5B70;line-height:1.8}
+@keyframes rmIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.rm-btn{display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding:12px 22px;border-radius:999px;border:1.5px solid rgba(212,42,134,.35);background:#fff;cursor:pointer;
+  font-family:'Geist',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#D42A86;transition:background .25s,color .25s,border-color .25s}
+.rm-btn:hover{background:var(--grad);color:#fff;border-color:transparent}
+.rm-btn svg{width:16px;height:16px;transition:transform .3s}
+.rm-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
