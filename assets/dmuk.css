@@ -648,3 +648,66 @@ em{font-style:normal}
 .art-crm i:nth-child(2)::before{background:var(--accent)}
 .art-stars{color:#FFB23D;font-size:.8rem;letter-spacing:2px;align-content:center;gap:6px;justify-items:center}
 .art-stars i{display:block;width:56px;height:6px;border-radius:3px;background:rgba(255,255,255,.18)}
+
+/* =================================================================
+   v7: alternating light sections for balance
+   ================================================================= */
+.light{
+  --fill-dim:206,200,194;--fill-lit:22,19,17;--soft:#4F4943;
+  background:#F6F4F0 !important;color:#4F4943;border-top-color:rgba(20,15,10,.06) !important;
+}
+.light .sec-head :is(h1,h2){color:#16130F}
+.light .sec-head :is(h1,h2) .outline .c,.light .sec-head :is(h1,h2) .outline .w{color:#E0561B !important}
+.light .sec-eyebrow{color:#7A736C}
+.light .sec-eyebrow b{color:#E0561B}
+.light .sec-sub,.light p,.light span,.light li{color:#4F4943}
+.light h3,.light b,.light strong{color:#16130F}
+.light .proc-dust{display:none}
+
+/* cards become white with a soft shadow */
+.light :is(.who li,.q,.founder,.cy,.nc2,.tri article,.tl,.callout--plain,.tm2,.price,.city,.proc-card,.faults li){
+  background:#fff !important;border:1px solid rgba(20,15,10,.08) !important;
+  box-shadow:0 1px 2px rgba(20,15,10,.04),0 14px 34px -22px rgba(20,15,10,.25)}
+.light :is(.nc2,.q,.city,.proc-card):hover{border-color:rgba(224,86,27,.4) !important}
+.light .callout:not(.callout--plain){background:#FFF0E6;border-color:rgba(224,86,27,.25)}
+.light .callout--big p,.light .callout .t{color:#16130F}
+.light .callout .k{color:#E0561B}
+.light .defs div{background:#fff;border:1px solid rgba(20,15,10,.07)}
+.light .prose-col p:first-child{color:#16130F}
+.light .q .qn,.light .q a,.light .cy .k,.light .tl .tl-k,.light .tm2 .r,.light .city i{color:#E0561B}
+.light .q svg.qg{stroke:rgba(224,86,27,.3)}
+.light .founder blockquote{color:#16130F}
+.light .founder cite{color:#E0561B}
+.light .founder li{color:#16130F}
+.light .who li b{color:#16130F}
+.light .tm2 .av,.light .nc2 .n{color:#fff}
+.light .faults li{color:#2A2420}
+
+/* table */
+.light .track{border-color:rgba(20,15,10,.1);background:#fff}
+.light .track th{background:#EFEBE5;color:#6B645D}
+.light .track td{border-top-color:rgba(20,15,10,.07)}
+.light .track td:first-child{color:#16130F}
+
+/* process timeline on light */
+.light .proc-spine{background:rgba(20,15,10,.1)}
+.light .proc-node{background:#fff;border-color:rgba(20,15,10,.2)}
+.light .proc-card p.proc-kicker{background:none;color:#E0561B;-webkit-background-clip:border-box;background-clip:border-box}
+.light .proc-card p.proc-kicker svg{stroke:#E0561B}
+.light .proc-card h3{color:#16130F}
+
+/* faq on light */
+.light .faq-item{border-bottom-color:rgba(20,15,10,.12)}
+.light .faq-item summary{color:#16130F}
+.light .faq-item summary:hover{color:#E0561B}
+.light .faq-ic{border-color:rgba(20,15,10,.25)}
+.light .faq-ic::before,.light .faq-ic::after{background:#16130F}
+.light .faq-item[open] .faq-ic::after{background:#fff}
+
+/* buttons on light */
+.light .btn--ghost{color:#16130F;border-color:rgba(20,15,10,.2);background:#fff}
+.light .btn--ghost:hover{color:#E0561B;border-color:#E0561B}
+
+/* calmer, more professional buttons everywhere */
+.btn--primary{box-shadow:0 10px 24px -14px rgba(242,106,33,.8)}
+.btn--primary:hover,.btn--primary:focus-visible{box-shadow:0 14px 30px -14px rgba(242,106,33,.9)}
