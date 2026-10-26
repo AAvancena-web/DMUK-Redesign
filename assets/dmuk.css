@@ -1011,3 +1011,17 @@ header.site.stuck{background:rgba(5,11,21,.86)}
 .contact-steps-k{margin:0;font-family:'Geist Mono',monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#F45BA8}
 .contact .contact-panel:first-child .contact-social{margin-top:auto}
 .contact-steps-k{margin-top:10px !important}
+
+/* landing (SEO services) extras */
+.lp-price{display:flex;align-items:baseline;gap:12px;margin:0 0 26px}
+.lp-price b{font-family:'Geist',sans-serif;font-weight:900;font-size:clamp(2rem,3.4vw,2.8rem);letter-spacing:-.05em;color:#fff}
+.lp-price span{font-family:'Geist Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#A9B5C4}
+.lp-trust{padding:clamp(20px,3vw,34px) 0 !important}
+.lp-trust .aw2{padding:clamp(18px,2.4vw,28px) 14px}
+.lp-ic{display:flex;justify-content:center;margin:0 0 10px !important}
+.lp-ic svg{width:36px;height:36px;padding:8px;border-radius:12px;background:var(--grad);color:#fff;stroke:#fff}
+.light .aw2 .aw2-n.lp-ic{-webkit-text-fill-color:initial;background:none}
+.lp-trust .aw2-l{margin-bottom:6px !important}
+@media (min-width:1100px){.cycle--4{grid-template-columns:repeat(4,1fr)}}
+.lp-price b i{font-style:normal}
+.lp .hero h1 .h-pre,.lp .hero h1 .h-solid,body:has(.lp-price) .hero h1 .h-pre,body:has(.lp-price) .hero h1 .h-solid{font-size:clamp(2.6rem,5.6vw,5rem)}
