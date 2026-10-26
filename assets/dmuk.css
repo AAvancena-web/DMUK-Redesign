@@ -921,3 +921,65 @@ em{font-style:normal}
 .light .aw2 .aw2-n span,.aw2-n sup{color:inherit !important;-webkit-text-fill-color:transparent;background:inherit;-webkit-background-clip:text;background-clip:text}
 .aw2-title span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .light .aw2 .aw2-n span,.aw2-n sup{color:transparent !important;background:none !important;-webkit-text-fill-color:transparent}
+
+/* who-for cards v2: illustrated pain points */
+.who2 li.who-c{padding:16px 16px 26px;display:flex;flex-direction:column}
+.who2 li.who-c::before{display:none}
+.who-art{position:relative;height:132px;border-radius:16px;margin-bottom:20px;overflow:hidden;
+  background:linear-gradient(180deg,#FBF9F7,#F3EFEA);border:1px solid rgba(20,15,10,.06);
+  background-image:linear-gradient(rgba(20,15,10,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(20,15,10,.045) 1px,transparent 1px),linear-gradient(180deg,#FBF9F7,#F3EFEA);
+  background-size:24px 24px,24px 24px,auto}
+.who-c > .who-k,.who-c > b,.who-c > p{padding:0 10px}
+.light .who-k{display:block;margin-bottom:10px;font-family:'Geist Mono',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#D42A86}
+.light .who2 li b{display:block;font-family:'Geist',sans-serif;font-weight:800;font-size:1.22rem;letter-spacing:-.025em;line-height:1.2;margin-bottom:8px;color:#16130F}
+.light .who2 li p{margin:0;font-size:.95rem;line-height:1.6;color:#5A534C}
+.who-foot{margin:clamp(22px,3vw,32px) 0 0;text-align:center;font-weight:600;color:#4F4943}
+.light .who-foot a{color:#D42A86;font-weight:800;text-decoration:none;border-bottom:2px solid rgba(212,42,134,.25);transition:border-color .3s}
+.light .who-foot a:hover{border-color:#D42A86}
+
+/* 01 dropping chart */
+.art-drop svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:96px}
+.wa-line{fill:none;stroke:#E6359B;stroke-width:3;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;vector-effect:non-scaling-stroke}
+.who-c.in .wa-line{animation:waDraw 1.8s cubic-bezier(.4,0,.2,1) .3s forwards}
+.wa-area{opacity:0;transition:opacity 1s ease 1.2s}
+.who-c.in .wa-area{opacity:1}
+.wa-dot{fill:#E6359B;opacity:0;transform-box:fill-box;transform-origin:center}
+.who-c.in .wa-dot{animation:waPing 2.2s ease-out 2s infinite}
+@keyframes waDraw{to{stroke-dashoffset:0}}
+@keyframes waPing{0%{opacity:1;filter:drop-shadow(0 0 0 rgba(230,53,155,.8))}70%{opacity:1;filter:drop-shadow(0 0 8px rgba(230,53,155,.0))}100%{opacity:1}}
+.wa-chip{position:absolute;left:12px;top:12px;z-index:2;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid rgba(20,15,10,.08);
+  font-family:'Geist Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#5A534C !important;box-shadow:0 6px 14px -8px rgba(20,15,10,.25)}
+.wa-chip em{font-style:normal;color:#D42A86;font-weight:700}
+
+/* 02 Google vs AI */
+.art-gap{display:grid;align-content:center;gap:14px;padding:0 16px}
+.wa-row{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;padding:8px 10px;border-radius:12px;background:#fff;border:1px solid rgba(20,15,10,.07);box-shadow:0 6px 14px -10px rgba(20,15,10,.3)}
+.wa-ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#F4F1ED}
+.wa-ic svg{width:16px;height:16px}
+.wa-bar{height:7px;border-radius:99px;background:#EFEAE4;overflow:hidden}
+.wa-bar i{display:block;height:100%;width:0;border-radius:inherit;background:#34A853;transition:width 1.4s cubic-bezier(.2,.7,.2,1) .4s}
+.wa-row:nth-child(2) .wa-bar i{background:var(--grad)}
+.who-c.in .wa-bar i{width:var(--w)}
+.wa-pill{font-family:'Geist Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:999px;white-space:nowrap}
+.light .wa-pill.ok{background:rgba(52,168,83,.12);color:#1E7A3A}
+.light .wa-pill.no{background:rgba(230,53,155,.12);color:#C2257A}
+.who-c.in .wa-pill.no{animation:waShake .5s ease 1.8s}
+@keyframes waShake{25%{transform:translateX(-3px)}50%{transform:translateX(3px)}75%{transform:translateX(-2px)}}
+
+/* 03 pace race */
+.art-pace{display:grid;align-content:center;gap:16px;padding:0 18px}
+.wa-lane{display:grid;grid-template-columns:104px 1fr;gap:10px;align-items:center}
+.light .wa-lane > span:first-child{font-family:'Geist Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#6B645D}
+.wa-track{position:relative;height:10px;border-radius:99px;background:#EAE5DF;overflow:hidden}
+.wa-track .run{position:absolute;left:0;top:0;bottom:0;border-radius:inherit}
+.wa-track .fast{width:100%;background:linear-gradient(90deg,rgba(230,53,155,.25),#E6359B);transform-origin:left;animation:waRun 2.6s cubic-bezier(.5,0,.3,1) infinite}
+.wa-track .slow{width:100%;background:#BDB5AD;transform-origin:left;animation:waRunSlow 2.6s cubic-bezier(.5,0,.3,1) infinite}
+@keyframes waRun{0%{transform:scaleX(0)}60%,100%{transform:scaleX(1)}}
+@keyframes waRunSlow{0%{transform:scaleX(0)}60%,100%{transform:scaleX(.38)}}
+.who-c:hover .who-art{border-color:rgba(230,53,155,.25)}
+@media (prefers-reduced-motion:reduce){
+  .wa-line{stroke-dashoffset:0;animation:none!important}.wa-area{opacity:1}.wa-bar i{width:var(--w);transition:none}
+  .wa-track .fast{animation:none;transform:none}.wa-track .slow{animation:none;transform:scaleX(.38)}}
+.case-feature--solo{grid-template-columns:1fr !important;max-width:860px;margin-inline:auto;text-align:center}
+.case-feature--solo .cf-copy{margin-inline:auto}
+.case-feature--solo .cf-tags{justify-content:center}
