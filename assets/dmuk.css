@@ -1289,3 +1289,48 @@ header.site.stuck{background:rgba(5,11,21,.86)}
 .grv blockquote.grv-long.open{display:block;-webkit-line-clamp:unset}
 .grv-more{margin-top:10px;padding:0;border:0;background:none;cursor:pointer;font-family:'Geist',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#D42A86}
 .grv-more:hover{text-decoration:underline}
+
+/* =================================================================
+   Mobile: centred layout (forms, FAQ, tables, lists and reviews stay left)
+   ================================================================= */
+@media (max-width:759px){
+  .drawer .dl span{display:none}
+  .hero-copy,.ph-copy,.cs2-hero .hero-copy{text-align:center}
+  .hero-copy .eyebrow{justify-content:center}
+  .hero h1,.hero-sub{margin-left:auto;margin-right:auto}
+  .found-on{justify-content:center;align-self:center}
+  .found-on .fo-list{justify-content:center}
+  .lp-price,.cs2-chips{justify-content:center}
+  .sec-head,.sec--left .sec-head,.page-head .sec-head,.stack .sec-head,.rm-head{align-items:center !important;text-align:center !important}
+  .sec-head .sec-eyebrow,.sec-head .sec-sub,.sec--left .sec-head .sec-eyebrow,.sec--left .sec-head .sec-sub,.page-head .sec-eyebrow,.page-head .sec-sub,.stack .sec-head .sec-eyebrow,.stack .sec-head .sec-sub,.rm-head .sec-eyebrow,.lpcs-k{text-align:center !important;margin-left:auto !important;margin-right:auto !important}
+  .stack-copy{text-align:center}
+  .prose-col,.prose-col p,.rm-body > p,.lpcs-top > div:first-child,.lpcs-p{text-align:center;margin-left:auto;margin-right:auto}
+  .rm-body{text-align:center}
+  .rm-more{text-align:left}
+  .callout,.callout--big{text-align:center}
+  .defs div{text-align:left}
+  .nc2,.who2 li.who-c,.q,.cy,.tl,.tri article,.tm2,.city,.aw2,.zero,.st,.ba,.post,.gap-card,.price,.kpi,.fnote-quote,.lead-card,.lpcs-quote,.cf-stats div,.case-feature,.res-hero,.gauge-card{text-align:center}
+  .q{align-items:center}
+  .tm2 .top,.fdr,.fnote-sig,.lpcs-quote figcaption,.bigquote figcaption,.cs2-quote{justify-content:center}
+  .fnote-k{padding-left:0}.fnote-mark{left:50%;transform:translateX(-50%)}
+  .ba-n,.st-n{justify-content:center}
+  .gap-who{flex-direction:column;align-items:center}
+  .gap-rows li{text-align:left}
+  .price ul,.next,.faults,.locs,.track,.dates,.res-cmp{text-align:left}
+  .price ul{max-width:300px;margin-left:auto;margin-right:auto}
+  .lead-card{grid-template-columns:1fr;justify-items:center}
+  .fnote-list li{text-align:left}
+  .gauge{margin-left:auto;margin-right:auto}
+  .who-c > .who-k,.who-c > b,.who-c > p{padding:0}
+  .contact-panel h3,.contact-intro{text-align:center}
+  .center-cta,.cta-actions{justify-content:center}
+  .site-foot .foot-top{text-align:center}
+  .site-foot .foot-brand .dm-logo{margin-left:auto;margin-right:auto}
+  .site-foot .foot-social,.contact-social{justify-content:center}
+  .foot-bottom{text-align:center;justify-content:center}
+  .grv-head{justify-content:center;text-align:center}
+  .grv-head .grv-score{justify-content:center}
+  .grv-all{margin-left:0 !important}
+  .who-foot,.after,.proof-note,.price-fine{text-align:center}
+  .lpcs-tl li{text-align:center}.lpcs-tl li::before{margin-left:auto;margin-right:auto}
+}
