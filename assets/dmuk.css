@@ -453,3 +453,47 @@ body{color:#C9CED8}
 .hero h1{max-width:none}
 .h-solid{font-size:clamp(2.6rem,6.4vw,5.2rem)}
 .price .p-num{font-size:clamp(1.9rem,2.8vw,2.4rem);line-height:1.1}
+
+/* =================================================================
+   v3: single-accent palette — no multi-colour gradients on CTAs/headings
+   ================================================================= */
+:root{
+  --accent:#F26A21; --accent-hi:#FF8A3D;
+  --grad:linear-gradient(0deg,#F26A21,#F26A21);
+  --grad-soft:linear-gradient(135deg,rgba(242,106,33,.14),rgba(242,106,33,.05));
+  --amber:#FF8A3D; --red:#F26A21;
+}
+/* headings: white first line, solid orange second line */
+.sec-head :is(h1,h2) .outline{background:none;-webkit-background-clip:border-box;background-clip:border-box}
+.sec-head :is(h1,h2) .outline .c,
+.sec-head :is(h1,h2) .outline .w{color:var(--accent-hi) !important}
+.h-solid em,.hs-lead,.cf-title em{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--accent-hi)}
+.sec-eyebrow b{color:var(--accent-hi)}
+/* buttons: solid orange with an orange glow */
+.btn--primary{box-shadow:0 0 18px -3px rgba(242,106,33,.55),0 12px 30px -14px rgba(242,106,33,.85);animation:none}
+.btn--primary:hover,.btn--primary:focus-visible{color:var(--accent);box-shadow:0 0 26px -2px rgba(242,106,33,.7),0 18px 38px -14px rgba(242,106,33,.9)}
+/* CTA band + contact band: one warm orange, no rainbow */
+.cta-band{background:
+    linear-gradient(180deg,rgba(6,5,8,0) 55%,rgba(6,5,8,.55) 85%,rgba(6,5,8,.9) 100%),#F26A21}
+.contact{background:
+    linear-gradient(180deg,rgba(6,5,8,0) 44%,rgba(6,5,8,.55) 74%,rgba(6,5,8,.95) 100%),#F26A21}
+.cta-band .sec-head :is(h1,h2) .outline .c,.cta-band .sec-head :is(h1,h2) .outline .w,
+.contact .sec-head :is(h1,h2) .outline .c,.contact .sec-head :is(h1,h2) .outline .w{color:#140612 !important}
+.cta-band .sec-head :is(h1,h2){--fill-dim:255,214,190;--fill-lit:20,6,18}
+.contact .sec-head :is(h1,h2){--fill-dim:255,214,190;--fill-lit:20,6,18}
+/* glow washes in section backgrounds: orange only */
+.sec{background:
+    radial-gradient(90% 60% at 10% 4%,rgba(242,106,33,.09) 0%,rgba(242,106,33,0) 58%),
+    radial-gradient(90% 62% at 92% 92%,rgba(242,106,33,.07) 0%,rgba(242,106,33,0) 60%),
+    #0A090D}
+.callout{border-color:rgba(242,106,33,.3)}
+.consent input{accent-color:var(--accent)}
+.founder li svg{color:var(--accent-hi)}
+/* service cards: dark with orange accents instead of multi-colour fills */
+.q{background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);color:#C9CED8;transition:border-color .3s,transform .5s cubic-bezier(.2,.7,.3,1)}
+.q:hover{border-color:rgba(242,106,33,.55);transform:translateY(-4px)}
+.q .qn{color:var(--accent-hi);opacity:1}
+.q h3{color:#fff}
+.q p{color:#C9CED8}
+.q a{color:var(--accent-hi)}
+.q svg.qg{stroke:rgba(242,106,33,.35)}
