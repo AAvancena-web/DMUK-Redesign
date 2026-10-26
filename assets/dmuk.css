@@ -1285,3 +1285,7 @@ header.site.stuck{background:rgba(5,11,21,.86)}
 #reviews .grv-head{box-shadow:0 14px 34px -22px rgba(11,31,58,.25)}
 .grv-head{max-width:780px;margin-left:auto;margin-right:auto}
 .grv-stars,.light .grv-stars{color:#FBBC04 !important}
+.grv blockquote.grv-long{display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.grv blockquote.grv-long.open{display:block;-webkit-line-clamp:unset}
+.grv-more{margin-top:10px;padding:0;border:0;background:none;cursor:pointer;font-family:'Geist',sans-serif;font-weight:800;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#D42A86}
+.grv-more:hover{text-decoration:underline}
