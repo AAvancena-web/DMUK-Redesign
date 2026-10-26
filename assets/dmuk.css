@@ -821,3 +821,51 @@ em{font-style:normal}
 .curve figcaption b{color:#fff;font-family:'Geist',sans-serif;font-size:.95rem}
 .curve figcaption span{font-family:'Geist Mono',monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:#A7ADBA}
 .curve--lead{border-color:rgba(242,106,33,.45)}
+
+/* founder note: dark editorial panel inside the light section */
+.fnote{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr;gap:clamp(26px,4vw,56px);align-items:center;
+  margin-top:clamp(28px,4vw,44px);border-radius:28px;padding:clamp(28px,4.2vw,60px);
+  background:radial-gradient(70% 90% at 0% 0%,rgba(242,106,33,.22) 0%,rgba(242,106,33,0) 60%),
+             radial-gradient(60% 80% at 100% 100%,rgba(242,106,33,.12) 0%,rgba(242,106,33,0) 60%),#121015;
+  box-shadow:0 40px 80px -40px rgba(20,15,10,.55)}
+@media (min-width:980px){.fnote{grid-template-columns:1.35fr .9fr}}
+.fnote::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(80% 80% at 30% 30%,#000,transparent);mask-image:radial-gradient(80% 80% at 30% 30%,#000,transparent)}
+.fnote > *{position:relative;z-index:1}
+.fnote-quote{position:relative}
+.fnote-mark{position:absolute;left:-.06em;top:-.42em;font-family:'Geist',sans-serif;font-weight:900;font-size:clamp(7rem,12vw,11rem);line-height:1;
+  color:transparent;-webkit-text-stroke:2px rgba(242,106,33,.55);pointer-events:none}
+.light .fnote p,.light .fnote span,.light .fnote li{color:inherit}
+.fnote-k{margin:0 0 18px;padding-left:clamp(56px,7vw,90px);font-family:'Geist Mono',monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#FF8A3D !important}
+.fnote blockquote{margin:0;font-family:'Geist',sans-serif;font-weight:700;color:#fff;letter-spacing:-.03em;
+  font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.28}
+.fnote mark{background:none;color:#FF8A3D;
+  background-image:linear-gradient(90deg,rgba(242,106,33,.32),rgba(242,106,33,.32));background-repeat:no-repeat;background-position:0 88%;
+  background-size:0% .32em;transition:background-size 1.2s cubic-bezier(.2,.7,.3,1) .5s}
+.fnote.in mark{background-size:100% .32em}
+.fnote-sig{display:flex;align-items:center;gap:14px;margin-top:clamp(22px,3vw,30px)}
+.fnote-av{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--accent);color:#fff !important;
+  font-family:'Geist',sans-serif;font-weight:900;font-size:1.25rem;box-shadow:0 0 0 4px rgba(242,106,33,.18)}
+.fnote-sig b{display:block;color:#fff !important;font-family:'Geist',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:-.015em}
+.fnote-sig span{font-size:.84rem;color:#A7ADBA !important}
+.fnote-scribble{width:130px;height:34px;margin-left:8px;fill:none;stroke:#FF8A3D;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:320;stroke-dashoffset:320;transition:stroke-dashoffset 2s ease .9s;opacity:.9}
+.fnote.in .fnote-scribble{stroke-dashoffset:0}
+@media (max-width:560px){.fnote-scribble{display:none}}
+.fnote-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.fnote-list li{display:flex;gap:14px;align-items:flex-start;padding:18px;border-radius:18px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);
+  opacity:0;transform:translateX(24px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.3,1),border-color .3s,background .3s}
+.fnote.in .fnote-list li{opacity:1;transform:none}
+.fnote.in .fnote-list li:nth-child(2){transition-delay:.15s}
+.fnote.in .fnote-list li:nth-child(3){transition-delay:.3s}
+.fnote-list li:hover{border-color:rgba(242,106,33,.45);background:rgba(242,106,33,.07)}
+.fnote-ic{width:36px;height:36px;border-radius:11px;flex:none;display:grid;place-items:center;background:rgba(242,106,33,.16);border:1px solid rgba(242,106,33,.4)}
+.fnote-ic svg{width:18px;height:18px;color:#FF8A3D}
+.fnote-list b{display:block;color:#fff !important;font-family:'Geist',sans-serif;font-weight:800;font-size:1rem;letter-spacing:-.015em;margin-bottom:3px}
+.fnote-list li span:not(.fnote-ic){font-size:.88rem;line-height:1.5;color:#B9BFCB !important}
+@media (prefers-reduced-motion:reduce){
+  .fnote mark{background-size:100% .32em;transition:none}.fnote-scribble{stroke-dashoffset:0;transition:none}
+  .fnote-list li{opacity:1;transform:none;transition:none}}
+.light .fnote .fnote-av,.fnote .fnote-av{color:#fff !important}
