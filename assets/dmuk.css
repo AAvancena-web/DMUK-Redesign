@@ -538,3 +538,42 @@ em{font-style:normal}
 .sec[data-n]::after{font-family:'Geist',sans-serif;font-weight:900}
 /* titles are big now; drop the watermark numbers so they never collide */
 .sec[data-n]::after{display:none}
+
+/* =================================================================
+   v5: live ink banner (WebGL fluid) + entrance motion
+   ================================================================= */
+.fluid{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;display:block;
+  opacity:0;animation:fluidIn 1.8s .15s ease forwards}
+@keyframes fluidIn{to{opacity:1}}
+.has-fluid .hero .aurora,.has-fluid .hero .sweep{display:none}
+.fluid-veil{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  radial-gradient(60% 70% at 22% 48%,rgba(8,7,10,.5) 0%,rgba(8,7,10,.18) 55%,rgba(8,7,10,0) 80%),
+  linear-gradient(180deg,rgba(8,7,10,.35) 0%,rgba(8,7,10,0) 18%,rgba(8,7,10,0) 78%,#0A090D 100%)}
+.hero .stars,.hero .stars2{z-index:1}
+.hero .hero-form{background:rgba(14,12,17,.55);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%)}
+.hero{min-height:min(100svh,940px);display:flex;align-items:center}
+.hero > .wrap{width:100%}
+
+/* headline lines rise in, one after another */
+.hero h1 > span{display:block;overflow:hidden}
+.hero h1 .h-pre,.hero h1 .h-solid{animation:lineUp 1s cubic-bezier(.2,.7,.2,1) both}
+.hero h1 .h-pre{animation-delay:.25s}
+.hero h1 .h-solid{animation-delay:.42s}
+@keyframes lineUp{from{transform:translateY(40%);opacity:0;filter:blur(8px)}to{transform:none;opacity:1;filter:none}}
+/* a slow warm glint across the key word */
+.h-solid em{background:linear-gradient(100deg,#FF8A3D 0%,#FF8A3D 40%,#FFD3A8 50%,#FF8A3D 60%,#FF8A3D 100%);background-size:250% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:glint 6s 1.6s ease-in-out infinite}
+@keyframes glint{0%{background-position:100% 0}45%,100%{background-position:0 0}}
+
+/* scroll cue */
+.scroll-cue{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;
+  font-family:'Geist Mono',monospace;font-size:.62rem;letter-spacing:.3em;color:rgba(255,255,255,.55)}
+.scroll-cue i{display:block;width:1px;height:42px;background:linear-gradient(180deg,rgba(255,138,61,0),#FF8A3D);transform-origin:top;animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);opacity:1}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+@media (max-width:899px){.scroll-cue{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .fluid{animation:none;opacity:1}
+  .hero h1 .h-pre,.hero h1 .h-solid,.h-solid em,.scroll-cue i{animation:none}
+  .h-solid em{background:none;color:#FF8A3D}
+}
