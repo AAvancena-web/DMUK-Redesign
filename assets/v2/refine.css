@@ -1,1 +1,2 @@
-/* Intentionally empty: homepage matches the handover preview exactly. */
+/* Form card accent: follow the rounded corners instead of a flat bar. */
+.v2-formcard::before{inset:-1px;height:auto;border-radius:inherit;clip-path:inset(0 0 calc(100% - 6px) 0);}
