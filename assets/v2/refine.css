@@ -4,3 +4,7 @@
 html.v2-js .v2-ticker[data-state="paused"] .v2-ticker__track,html.v2-js .v2-ticker[data-state="playing"]:hover .v2-ticker__track,html.v2-js .v2-ticker[data-state="playing"]:focus-within .v2-ticker__track{animation-play-state:paused !important;}
 /* FAQ in two columns on wider screens. */
 @media(min-width:900px){.v2-faq__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,4vw,64px);align-items:start;max-width:none;border-top:0;}.v2-faq__item:nth-child(-n+2){border-top:1px solid #b4bdc9;}.v2-faq__item summary{font-size:clamp(18px,1.3vw,21px);}.v2-faq__answer{padding-right:56px;}}
+/* FAQ toggle: draw the + with two bars so it sits dead-centre (the text glyph sat low). */
+.v2-faq__toggle{position:relative;font-size:0;line-height:0;}
+.v2-faq__toggle::before,.v2-faq__toggle::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;border-radius:1px;background:currentColor;transform:translate(-50%,-50%);}
+.v2-faq__toggle::after{transform:translate(-50%,-50%) rotate(90deg);}
