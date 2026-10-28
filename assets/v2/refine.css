@@ -18,3 +18,14 @@ html.v2-js .v2-ticker[data-state="paused"] .v2-ticker__track,html.v2-js .v2-tick
 .v2-hero.v2-hero .v2-input{min-height:52px;height:52px;}
 .v2-hero.v2-hero .v2-btn--block{margin-top:clamp(6px,0.8vw,12px);min-height:58px;}
 .v2-hero.v2-hero .v2-reviews--compact{margin-top:clamp(18px,1.8vw,26px);padding-top:clamp(14px,1.4vw,20px);}
+/* Hero form: a little more compact (between the original and the roomy pass). */
+.v2-hero.v2-hero .v2-formcard{padding:clamp(22px,2.4vw,34px) clamp(20px,2.8vw,38px) clamp(20px,2vw,28px);}
+.v2-hero.v2-hero .v2-formcard__head{gap:8px;margin-bottom:clamp(16px,1.6vw,22px);}
+.v2-hero.v2-hero .v2-form__fields{gap:clamp(12px,1.2vw,16px);}
+.v2-hero.v2-hero .v2-form__row{row-gap:clamp(12px,1.2vw,16px);}
+.v2-hero.v2-hero .v2-field{gap:6px;}
+.v2-hero.v2-hero .v2-input{min-height:48px;height:48px;}
+.v2-hero.v2-hero .v2-btn--block{margin-top:4px;min-height:54px;}
+.v2-hero.v2-hero .v2-reviews--compact{margin-top:14px;padding-top:12px;}
+.v2-input::placeholder{color:#8a94a6;opacity:1;}
+.v2-contact .v2-input::placeholder{color:#7d8a9c;}
