@@ -1,2 +1,4 @@
 /* Form card accent: follow the rounded corners instead of a flat bar. */
 .v2-formcard::before{inset:-1px;height:auto;border-radius:inherit;clip-path:inset(0 0 calc(100% - 6px) 0);}
+/* M04: the animation shorthand in the higher-specificity ticker rules reset play-state to running, so Pause had no effect. */
+html.v2-js .v2-ticker[data-state="paused"] .v2-ticker__track,html.v2-js .v2-ticker[data-state="playing"]:hover .v2-ticker__track,html.v2-js .v2-ticker[data-state="playing"]:focus-within .v2-ticker__track{animation-play-state:paused !important;}
