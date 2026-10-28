@@ -1,0 +1,33 @@
+[
+  {
+    "file": "assets/v2/img/case-d3-semrush.png",
+    "source": "https://digitalmovement.uk/wp-content/themes/dmuk/assets/case-d3-semrush.png",
+    "bytes": 186584,
+    "provenance": "Original image referenced by the approved 26 October draft; downloaded without alteration.",
+    "checked": "2026-10-27"
+  },
+  {
+    "file": "assets/v2/img/case-bupa-semrush.png",
+    "source": "https://digitalmovement.uk/wp-content/themes/dmuk/assets/case-bupa-semrush.png",
+    "bytes": 121723,
+    "provenance": "Original image referenced by the approved 26 October draft; downloaded without alteration.",
+    "checked": "2026-10-27"
+  },
+  {
+    "file": "assets/v2/img/case-d3-hero.jpg",
+    "source": "https://digitalmovement.uk/wp-content/themes/dmuk/assets/case-d3-hero.jpg",
+    "bytes": 97300,
+    "provenance": "Original 26 October draft website screenshot, restored unchanged on explicit user request 27 October.",
+    "checked": "2026-10-27"
+  },
+  {
+    "file": "assets/v2/img/case-bupa-hero.jpg",
+    "source": "https://digitalmovement.uk/wp-content/themes/dmuk/assets/case-bupa-hero.jpg",
+    "bytes": 109796,
+    "provenance": "Original 26 October draft website screenshot, restored unchanged on explicit user request 27 October.",
+    "checked": "2026-10-27"
+  },
+  {
+    "note": "Website screenshots restored prominently on explicit 27 October user request. D3 Dental image is captioned as a website example; first Semrush report domain is redacted and not attributed to D3 Dental. Unsupported London identity labels removed. Bupa screenshot identified by its visible brand and bupa.co.uk report. Research/not-client-result label and approved figures retained."
+  }
+]
