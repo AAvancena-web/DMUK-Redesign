@@ -134,7 +134,7 @@
   var PHONE_TEXT = '+44 7865 064463';
   var PHONE_HREF = 'tel:+447865064463';
   var EMAIL = 'alex@digitalmovement.uk';
-  var FIELDS = ['name', 'website', 'phone', 'email', 'service', 'message', 'consent'];
+  var FIELDS = ['name', 'business', 'website', 'phone', 'email', 'service', 'message', 'consent'];
   // A blur error must not move the next control between pointer-down and click.
   var pointerActive = false, afterPointer = [];
   doc.addEventListener('pointerdown', function () { pointerActive = true; }, true);
@@ -153,7 +153,8 @@
     phone:   { required: 'Enter a phone number so we can reply', format: 'Enter a UK phone number, like 07700 900123 or +44 20 7946 0000' },
     email:   { format: 'Enter an email address like name@business.co.uk, or leave it blank' },
     service: { required: 'Choose what you want help with' },
-    consent: { required: 'Tick the box so we can reply to you' }
+    consent: { required: 'Tick the box so we can reply to you' },
+    business: { required: 'Enter your business name' }
   };
   /* status wording; a form overrides a lead sentence with data-v2-msg-sending / -rejected / -timeout / -offline */
   var STATUS = {
@@ -291,7 +292,7 @@
     if (name === 'consent') {
       if (!f.checked) { out.ok = false; out.key = 'required'; }
       else out.value = true;
-    } else if (name === 'name' || name === 'service') {
+    } else if (name === 'name' || name === 'service' || name === 'business') {
       out.value = raw.trim();
       if (!out.value) { out.ok = false; out.key = 'required'; }
     } else if (name === 'website') {
@@ -483,14 +484,12 @@
     var secs = this.openedAt === null ? 0 : Math.round((Date.now() - this.openedAt) / 1000);
     return {
       name: v.name || '',
+      business: v.business || '',
       website: v.website || '',
       phone: v.phone || '',
       email: v.email || '',
       service: v.service || '',
       message: v.message || '',
-      consent: true,
-      consent_text: consentText,
-      consent_timestamp: new Date().toISOString(),
       page_url: location.href.split('#')[0],
       form_id: hidden('form_id') || f.id || '',
       form_location: hidden('form_location') || f.getAttribute('data-v2-form') || '',
@@ -928,7 +927,7 @@
   var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var reduce = motion.matches;
   var saved = false;
-  try { saved = sessionStorage.getItem('v2:hero-fluid') === 'paused'; } catch (e) {}
+  /* Pause control removed by request: background always runs (reduced-motion preference still respected). */
   var raf = 0, visible = true, running = false, failed = false, frames = 0;
   hero.dataset.fluidState = 'initialising';
   hero.dataset.fluidFrames = '0';
