@@ -8,3 +8,13 @@ html.v2-js .v2-ticker[data-state="paused"] .v2-ticker__track,html.v2-js .v2-tick
 .v2-faq__toggle{position:relative;font-size:0;line-height:0;}
 .v2-faq__toggle::before,.v2-faq__toggle::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;border-radius:1px;background:currentColor;transform:translate(-50%,-50%);}
 .v2-faq__toggle::after{transform:translate(-50%,-50%) rotate(90deg);}
+/* Hero: more breathing room above/below the banner and inside the form card. */
+.v2-hero.v2-hero{--v2-hero-pad-top:clamp(40px,7svh,96px);--v2-hero-pad-bottom:clamp(48px,8svh,104px);padding-block:var(--v2-hero-pad-top) var(--v2-hero-pad-bottom);}
+.v2-hero.v2-hero .v2-formcard{padding:clamp(26px,3vw,44px) clamp(20px,3.2vw,44px) clamp(24px,2.6vw,36px);}
+.v2-hero.v2-hero .v2-formcard__head{gap:10px;margin-bottom:clamp(20px,2.2vw,30px);}
+.v2-hero.v2-hero .v2-form__fields{gap:clamp(16px,1.6vw,22px);}
+.v2-hero.v2-hero .v2-form__row{column-gap:20px;row-gap:clamp(16px,1.6vw,22px);}
+.v2-hero.v2-hero .v2-field{gap:8px;}
+.v2-hero.v2-hero .v2-input{min-height:52px;height:52px;}
+.v2-hero.v2-hero .v2-btn--block{margin-top:clamp(6px,0.8vw,12px);min-height:58px;}
+.v2-hero.v2-hero .v2-reviews--compact{margin-top:clamp(18px,1.8vw,26px);padding-top:clamp(14px,1.4vw,20px);}
